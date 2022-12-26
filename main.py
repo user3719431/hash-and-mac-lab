@@ -1,5 +1,7 @@
 # v7 -- hash = HAS-160
 
+#"дааааа, еб*ть его в рот. втянули меня в какую-ту ху*ню" @я, коли шукав реалізацію has-160
+
 import numpy as np
 import scipy as sc
 import rhash
@@ -26,24 +28,14 @@ def binary_to_string(string):
 '''
 #--------------------------------------------------   
 
-h = rhash.HAS160
 
-def hash_function(string):
-    string = string_to_binary(string)
-    
-    h0 = '00000000'
-    h1 = '67452301'
-    h2 = 'EFCDAB89'
-    h3 = '98BADCFE'
-    h4 = '10325476'
-    
-    ml = len(string)
-    
-    
 
 
 def main():
-    return 
+    credentials = str('Skorobahatko Maksym Ihorovych')
+    hash_of_credentials = rhash.hash_msg(credentials, rhash.HAS160)
+    print(hash_of_credentials)
+
 
 if __name__ == '__main__':
     main()
